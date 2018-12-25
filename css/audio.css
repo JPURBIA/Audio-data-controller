@@ -1,0 +1,29 @@
+#myAudioPlayer{
+    width: auto;
+    height: 60px;
+    background-color: #413f3f;
+    padding: 20px;
+}
+.sliderContainer{
+    display:inline;
+}
+.slider{
+    height:10px;
+    opacity:0.7;
+}
+.slider:hover{
+    opacity:1;
+}
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: lightgray;
+    cursor: pointer;
+}
+#myTrack{
+    width:300px;
+}
+#myVol{
+    width:100px;
+}

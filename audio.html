@@ -9,6 +9,25 @@
     <script src="js/audio.js"></script>
 </head>
 <body>
-    
+    <audio id="myAudio" preload="none">
+        <source src="whatDoYouMean.mp3" type="audio/mp3">
+        Your Browser doesn't support audio tag 
+    </audio>
+    <div id="myAudioPlayer">
+        <button id="load" onclick="loadAudioFile();">Load</button>
+        <button id="play" onclick="playAudio();">Play</button>
+        <button id="pause" onclick="pauseAudio();">Pause</button>
+        <button id="stop" onclick="stopAudio();">Stop</button>
+        <button id="backward" onclick="moveBackward();">-10s</button>
+        <div class="sliderContainer">
+            <input id="myTrack" type="range" class="slider" on-drag="changePosition();">
+        </div>
+        <span>--:--/--:--</span>
+        <button id="forward" onclick="moveForward();">+10s</button>
+        <button id="mute" onclick="muteAudio();">Mute</button>
+        <div class="sliderContainer">
+            <input id="myVol" type="range" class="slider" on-drag="changeVolume();">
+        </div>
+    </div>
 </body>
-</html>>
+</html>
