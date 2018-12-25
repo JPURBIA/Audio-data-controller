@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <audio id="myAudio" preload="none" loop="false">
-        <source src="whatDoYouMean.mp3" type="audio/mp3"> Your Browser doesn't support audio tag
+    <audio id="myAudio" preload="none" loop="false" ontimeupdate="initProgressBar();">
+        <source src="whatDoYouMean.mp3" type="audio/mp3"> 
+        Your Browser doesn't support audio tag
     </audio>
     <div id="myAudioPlayer">
         <button id="load" onclick="loadAudioFile();">Load</button>
@@ -20,8 +21,8 @@
         <button id="pause" onclick="pauseAudio();">Pause</button>
         <button id="stop" onclick="stopAudio();">Stop</button>
         <button id="backward" onclick="moveBackward();">-10s</button>
-        <div class="sliderContainer">
-            <input id="myTrack" type="range" class="slider" onchange="changePosition();">
+        <div class="seekObjContainer">
+            <progress id="seekObj" value="0" max="1" class="slider"></progress>
         </div>
         <div id="runTime">
             <span id="cur"></span> /
