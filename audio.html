@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/audio.css" />
     <script src="js/audio.js"></script>
 </head>
+
 <body>
-    <audio id="myAudio" preload="none">
-        <source src="whatDoYouMean.mp3" type="audio/mp3">
-        Your Browser doesn't support audio tag 
+    <audio id="myAudio" preload="none" loop="false">
+        <source src="whatDoYouMean.mp3" type="audio/mp3"> Your Browser doesn't support audio tag
     </audio>
     <div id="myAudioPlayer">
         <button id="load" onclick="loadAudioFile();">Load</button>
@@ -20,14 +21,17 @@
         <button id="stop" onclick="stopAudio();">Stop</button>
         <button id="backward" onclick="moveBackward();">-10s</button>
         <div class="sliderContainer">
-            <input id="myTrack" type="range" class="slider" on-drag="changePosition();">
+            <input id="myTrack" type="range" class="slider" onchange="changePosition();">
         </div>
-        <span>--:--/--:--</span>
-        <button id="forward" onclick="moveForward();">+10s</button>
-        <button id="mute" onclick="muteAudio();">Mute</button>
-        <div class="sliderContainer">
-            <input id="myVol" type="range" class="slider" on-drag="changeVolume();">
+        <div id="runTime">
+            <span id="cur"></span> /
+            <span id="end"></span>
+            <button id="forward" onclick="moveForward();">+10s</button>
+            <button id="mute" onclick="muteAudio();">Mute</button>
+            <div class="sliderContainer">
+                <input id="myVol" type="range" class="slider" onchange="changeVolume();">
+            </div>
         </div>
-    </div>
 </body>
+
 </html>
